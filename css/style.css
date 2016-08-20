@@ -1,0 +1,222 @@
+@charset "utf-8";
+/* CSS Document */
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+  
+}
+
+.clearfix {
+  display: inline-block;
+  background-image: url(../imgs/background.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  
+}
+/* start commented backslash hack \*/
+
+* html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+/* close commented backslash hack */
+
+body {
+  font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+  
+}
+
+#contenedor {
+  width: 1060px;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  border: solid #3c8ed8;
+  border-radius: 10px;
+  clear: none;
+  
+}
+
+#logo {
+  margin: 20px;
+  float: left;
+  height: 80px;
+  width: 120px;
+}
+
+#loginRegistro{
+  float:right;
+  clear:right;
+  padding:0 24px 10px 0;
+}
+
+a:link, a:visited{
+  color:#0E56AB;
+}
+
+#navPrincipal {
+  
+  float: right;
+  margin-top: 35px;
+  margin-right:20px;
+}
+
+#navPrincipal li {
+  list-style-type: none;
+  padding: 10px;
+  margin: 5px;
+
+  float: left;
+  font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+}
+
+#navPrincipal a:link {
+  color: #D9D9D9;
+  text-decoration: none;
+}
+
+#navPrincipal a:visited {
+  color: #FBC155;
+}
+
+#cabezal {
+  background-color: blue;
+}
+
+#tablaServicios, #agregarServicio, #altaCliente, #venderServicio, #ServiciosAdquiridos, #ServiciosVendidos, #tablaTodosServicios, 
+#mantenimientoServicios, #buscarServicio{
+  background-color: #FFFFFF;
+  width: 584px;
+  height: auto;
+  padding:20px;
+  float: left;
+  border: solid #3c8ed8;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+#lateral {
+  background-color: #3c8ed8;
+  width: 390px;
+  float: left;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
+#pie {
+  background-color: #3c8ed8;
+  clear: both;
+  padding:20px;
+  color: white;
+  font-family: sans-serif;
+}
+
+#txtUsuario, #txtPassword {
+   width: 70px; /*tamaño de la caja de texto */ 
+   border-radius: 50px 50px; /*redondeado de la caja de texto*/ 
+   
+}
+
+#botonLogOut {
+    float:right;
+    clear:right;
+    border-radius: 5px 5px;
+}
+
+#btnLogin , #btnLoginOf {
+    border-radius: 5px 5px;
+    background-color: white;
+    color: black;
+    font-family: serif;
+    margin-left: 0px;
+    cursor: pointer;
+}
+
+#btnLoginOf{
+    margin-right: 40px;
+}
+
+#pAvisoLogin {
+    color: red;
+    margin-bottom: 0px;
+    margin-right: 20px;
+}
+
+
+.botones, #btnServiciosAdquiridos 
+{
+ padding: 15px;
+ border-radius: 1px;
+ margin-right: -20px;
+ cursor: pointer;
+ background-color: #3c8ed8;
+ color: white;
+ 
+}
+
+#tServicios, detalles, #tServiciosAdquiridos, #tServiciosVendidos, #tTodosServicios, #tServiciosReporte{
+    margin-left: 5px;
+    font-family: sans-serif;
+    border-width: 3px;
+    text-align: center;
+    border: solid 3px;
+    border-collapse: collapse;
+    
+    
+}
+
+.imgs{
+    height: 100%;; 
+    width: 100%; 
+    margin-top: 1px;
+    
+}
+
+h1 {
+    margin-top: 0px;
+}
+
+#tbImagenes, #detalles, img {
+    width: 228px;
+}
+
+.botonesVendedor{
+    
+}
+
+
+#tDestacados{
+    margin-left: -20px;
+    margin-top: 29px;
+    font-family: sans-serif;
+    border-width: 3px;
+    text-align: center;
+    border-collapse: collapse;
+    color: black;
+    font-size: 16px;
+    width: 430px;
+    background-color: rgba(32, 251, 5, 0.44);
+    
+}
+
+table tr{
+    border: solid 3px;
+}
+
+#tServiciosVendidos{
+    margin-left: 100px;
+}
+
+#btnSeccionAgregarServicio, #btnSeccionHabilitarDeshabilitarServicio{
+    margin-left: 10px;
+    margin-right: 10px;
+}

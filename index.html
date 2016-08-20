@@ -1,0 +1,320 @@
+<!DOCTYPE HTML>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NaN Travel</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+
+        <div id="contenedor">
+            <div class="cabezal clearfix">
+                <img id="logo" src="imgs/logo.png" alt="logo">
+                <ul id="navPrincipal"> 
+                    
+         <!-- BOTONES LOGIN-->
+                   
+         <li id="liUsuario" class="logear">
+                        <label for="txtUsuario"><strong>Usuario:</strong></label>
+                        <input type="text" id="txtUsuario">
+                    </li>
+                    <li id="liPassword" class="logear">
+                        <label for="txtPassword"><strong>Password:</strong></label>
+                        <input type="password" id="txtPassword">
+                    </li>
+                    
+                    <li id="liBotonLogin" class="logear">
+                        <input type="button" value="Login In" id="btnLogin">
+                    </li>
+                    
+        <!-- BOTONES VENDEDOR-->
+                    
+        <li hidden="hidden" class="botonesVendedor">
+                        <input type="button" value="Servicios" id="btnInicio" class="botones">
+                    </li>
+                    <li hidden="hidden" class="botonesVendedor">
+                        <input type="button" value="Alta de Cliente" id="btnAltaCliente" class="botones">
+                    </li>
+                    <li hidden="hidden" class="botonesVendedor">
+                        <input type="button" value="Venta de Servicios" id="btnVentaServicios" class="botones">
+                    </li>
+                    <li hidden="hidden" class="botonesVendedor">
+                        <input type="button" value="Mantenimiento de Servicios" id="btnMantenimientoServicio" class="botones">
+                    </li>
+                    <li hidden="hidden" class="botonesVendedor">
+                        <input type="button" value="Reportes" id="btnVisualizarReportes" class="botones"> 
+                    </li>
+                 
+        <!-- BOTONES CLIENTE-->            
+                    
+                    <li  hidden="hidden" class="botonesCliente">
+                        <input type="button" value="Servicios" id="btnServiciosCliente" class="botones"> 
+                    </li>
+                    <li  hidden="hidden" class="botonesCliente">
+                        <input type="button" value="Servicios Adquiridos" id="btnServiciosAdquiridos" class="botones"> 
+                    </li>
+                    
+                   </ul>
+        
+
+                <!--//SECCION DE INICIO DE LA PAGINA//-->    
+        
+<!--BLOQUE LOGIN-->
+        
+            <div id="loginRegistro">
+                <p id="pAvisoLogin"></p> 
+            </div>
+        
+<!--BLOQUE LOGOUT-->
+        
+            <div id="botonLogOut">
+                <input type="button" value="LogOut" id="btnLogOut" hidden="hidden">
+            </div>
+</div>
+        
+<!--BLOQUE TABLA DE SERVICIOS INICIO-->
+        
+            <div id="tablaServicios" >
+                <h1>Servicios </h1>
+          
+                <table id="tServicios" border="1">
+                    <thead id="thServicios">
+                        <tr>
+                            <th>Nombre</th><th id="tbImagenes">Imagen</th><th id="detalles">Detalles</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbServicios">
+                       
+                    </tbody>
+                </table>
+            </div>
+        
+                <!--//SECCION DEL CLIENTE//-->
+
+<!-- SERVICIOS ADQUIRIDOS -->
+           
+            <div id="ServiciosAdquiridos" hidden="hidden">
+                <h2>ServiciosAdquiridos</h2>
+                <p id="pAvisoServiciosAdquiridosCliente"></p>
+                <table border="1" id="tServiciosAdquiridos" hidden="hidden">
+                    
+                    <thead id="thServiciosAdquiridos">
+                    <tr>
+                    <th>Fecha</th><th>Servicio</th><th>Cantidad de Lugares</th><th>Precio</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tbServiciosAdquiridos">
+                        
+                    </tbody>   
+                    
+                </table>
+            </div>
+            
+
+                    <!--//SECCION DEL VENDEDOR//-->
+        
+<!--TABLA DE TODOS LOS SERVICIOS-->
+       
+            <div id="tablaTodosServicios" hidden="hidden">
+                <h1>Servicios </h1>
+          
+                <table id="tTodosServicios" border="1">
+                    <thead id="thTodosServicios">
+                        <tr>
+                            <th>Nombre</th><th>Imagen</th><th>Detalles</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbTodosServicios">
+                       
+                    </tbody>
+                </table>
+            </div>
+        
+<!--ALTA DE CLIENTES-->
+
+            <div hidden="hidden" id="altaCliente">
+                <h1>Alta de Cliente</h1>
+                <label for="txtNombre">Nombre: </label>
+                <input type="text" id="txtNombre">
+                <br>
+                <label for="txtNombreUsuario">Usuario: </label>
+                <input type="text" id="txtNombreUsuario">
+                <br>
+                <label for="txtUsuarioPassword">Password: </label>
+                <input type="text" id="txtUsuarioPassword">
+                <br>
+                <label for="txtEmail">Email: </label>
+                <input type="text" id="txtEmail">
+                <br>
+                <input type="button" value="Agregar Cliente" id="btnAgregarCliente">
+                <p id="pAgregarCliente"></p>
+            </div>
+        
+<!-- VENDER UN SERVICIO -->
+
+            <div id="venderServicio" hidden="hidden">
+                <h1>Vender Servicio</h1>
+                <label for="txtFecha">Fecha: </label>
+                <input type="text" id="txtFecha">
+                <br>
+                <label for="txtUsuarioVenta">Usuario: </label>
+                <input type="text" id="txtUsuarioVenta">
+                <br>
+                <label for="txtCodigoVentaServicio">Codigo: </label>
+                <input type="text" id="txtCodigoVentaServicio">
+                <br>
+                <label for="txtLugaresVenta">Lugares: </label>
+                <input type="text" id="txtLugaresVenta">
+                <br>
+                <input type="button" value="Vender" id="btnVenderServicioUsuario">
+                <p id="pAvisoUsuarioVenta"></p>
+             </div>
+        
+
+        
+        
+<!-- MANTENIMIENTO DE SERVICIO -->  
+
+        <div id="mantenimientoServicios" hidden="hidden">
+            <h1>Mantenimiento de Servicios</h1>
+            <input type="button" value="Agregar Servicio" id="btnSeccionAgregarServicio" class="botones">
+            <input type="button" value="Habilitar / Deshabilitar Servicio" id="btnSeccionHabilitarDeshabilitarServicio" class="botones">
+            </div> 
+
+            <!-- AÑADIR UN SERVICIO -->
+
+            <div id="agregarServicio" hidden="hidden">
+                <h1>Agregar Servicio</h1>
+                <label for="slcTipoServicio">Tipo Servicio: </label>
+                <select id="slcTipoServicio">
+                    <option value="Paseo">Paseo</option>
+                    <option value="Visita">Visita</option>
+                    <option value="Traslado">Traslado</option>
+                </select>
+                <br>
+                <br>
+                <label for="txtNombreServicio">Nombre del Servicio: </label>
+                <input type="text" id="txtNombreServicio">
+                <br>
+                <br>
+                <label for="SubirImagen">Seleccionar Imagen: </label>
+                <input type="file" id="SubirImagen">
+                <br>
+                <br>
+                <label for="txtPrecio">Precio: </label>
+                <input type="text" id="txtPrecio">
+                <br>
+                <br>
+                <label for="txtCantidadLugares">Cantidad de Lugares: </label>
+                <input type="text" id="txtCantidadLugares">
+                <br>
+                <br>
+                <label for="txtDescripcion">Descripcion:</label>
+                <br>
+                <textarea name="comentarios" rows="10" cols="40" id="txtDescripcion" placeholder="Escribe aquí una descripcion del servicio..."></textarea>
+                <br>
+                <br>
+                <input type="button" id="btnAgregarServicio" value="Agregar Servicio">
+                <p id="pAvisoAgregarServicio"></p>
+            </div>
+
+    
+            <!-- HABILITAR DESHABILITAR SERVICIO -->  
+
+            <div id="buscarServicio" hidden="hidden">
+                    <h1>Cambiar Estado del Servicio</h1>
+                <label for="txtCodigoServicio">Codigo: </label>
+                <input list="codigoServicio" id="txtCodigoServicio">
+                <datalist id="codigoServicio">
+                    
+                </datalist>
+                <input type="button" value="Buscar" id="btnBuscarCodigoServicio">
+                 
+                <table id="tbAvisoCodigoServicio" border="1" hidden="hidden">
+                    <thead id="thAvisoServicios">
+                        <tr>
+                            <th>Nombre</th><th>Imagen</th><th>Detalles</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbAvisoServicios">
+                       
+                    </tbody>
+                </table>
+                <p id="pAvisoBuscarCodigoServicio"></p>
+            <input type="button" value="Habilitar/Deshabilitar" id="btnCambiarEstadoServicio" hidden="hidden">
+        </div>
+            
+            <!-- REPORTES -->
+            <div id="ServiciosVendidos" hidden="hidden">
+                
+                <p>Ingrese un precio para buscar los servicios menores al precio ingresado</p>
+                <label for="txtPrecioUnitario">Precio Unitario</label>
+                <input type="text" id="txtPrecioUnitario">
+                <input type="button" value="Buscar Servicios" id="btnBuscarServicios">
+                <p id="pAvisoBuscarServiciosVendidos"></p>
+                <br>
+                <br>
+                <br>
+                
+                <table border="1" id="tServiciosReporte" hidden="hidden"> <!-- crear tabla de servicios x precio -->
+                    
+                    <thead id="thServiciosReporte">
+                    <tr>
+                    <th>Nombre</th><th>Imagen</th><th>Detalles</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tbServiciosReporte">
+                        
+                    </tbody>   
+                    
+                </table>
+                
+                <h3>ServiciosVendidos</h3>
+                <table border="1" id="tServiciosVendidos"> <!-- crear tabla de servicios vendidos -->
+                    
+                    <thead id="thServiciosVendidos">
+                    <tr>
+                    <th>Fecha</th><th>Servicio</th><th>Cantidad de Lugares</th><th>Precio</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tbServiciosVendidos">
+                        
+                    </tbody>   
+                    
+                </table>
+            </div>
+            
+    <!--BLOQUE TABLA DESTACADOS-->
+        
+            <div id="lateral">
+                <h2>Destacados</h2>
+                <table border="1" id="tDestacados">
+                    
+                    <thead id="thDestacados">
+                    <tr>
+                    <th>Imagen</th><th>Detalles</th> 
+                    </tr>
+                    </thead>
+                    <tbody id="tbDestacados">
+                        
+                    </tbody>   
+                    
+                </table>
+            </div>
+           
+    <!-- PIE DE LA PAGINA-->
+            
+            <div id="pie">
+                <p>
+                2016 NaN Travel™: Nahuel Gil, Alejandro Silva
+                </p>
+            </div>
+        
+    </div>
+        <script src="js/jquery-2.2.2.min.js" type="text/javascript"></script>
+        <script src="js/funciones.js" type="text/javascript"></script>
+        <script src="js/raiz.js" type="text/javascript"></script>
+    </body>
+</html>
